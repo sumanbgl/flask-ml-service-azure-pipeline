@@ -6,14 +6,14 @@ trigger:
 - main
 
 # TODO: Replace the agent pool name
-pool: myAgentPool
+pool: udacityshellagentpool
 
 variables:
   # TODO: Replace the service connection name as used in the DevOps project settings
-  azureServiceConnectionId: 'mySC'
+  azureServiceConnectionId: 'azure devops'
   
   # TODO: Specify the value of the existing Web App name
-  webAppName: 'mywebapp207578'
+  webAppName: 'suman-flask-ml-service'
 
   # Environment name
   environmentName: 'flask-ml-service'
@@ -26,7 +26,7 @@ stages:
   displayName: Build stage
   jobs:
   - job: BuildJob
-    pool: myAgentPool
+    pool: udacityshellagentpool
     steps:    
     - script: |
         python3.7 -m pip install --upgrade pip
